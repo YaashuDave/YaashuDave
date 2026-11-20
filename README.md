@@ -16,7 +16,7 @@ I'm currently diving deeper into ML infrastructure by contributing to open-sourc
 
 | PR | What I fixed |
 |---|---|
-| [#65935](https://github.com/vllm-project/vllm/pull/65935) | **ROCm MoE kernel benchmark:** the tuning script failed with current Ray on AMD GPUs, and multi-GPU runs could not tell the workers' devices apart. Validated on 2× Radeon RX 9070 XT, with [@giuseppegrossi](https://github.com/giuseppegrossi). |
+| [#65935](https://github.com/vllm-project/vllm/pull/65935) | **ROCm MoE kernel benchmark:** the tuning script failed with current Ray on AMD GPUs, and multi-GPU runs could not tell the workers' devices apart. Validated on 2× Radeon RX 9070 XT. |
 | [#64885](https://github.com/vllm-project/vllm/pull/64885) | **EmbeddingGemma 2:** every request for shortened (Matryoshka) embeddings was rejected. Enabled the model's supported sizes through its model config hook. |
 | [#62517](https://github.com/vllm-project/vllm/pull/62517) | **DeepSeek V4.1 tool parser:** a variant spelling of the tool-call opener leaked into the response text instead of starting a tool call. |
 | [#63186](https://github.com/vllm-project/vllm/pull/63186) | **LoRA + speculative decoding:** fixed a regression where draft models blocked LoRA serving. |
