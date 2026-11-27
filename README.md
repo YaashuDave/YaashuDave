@@ -16,6 +16,7 @@ I'm currently diving deeper into ML infrastructure by contributing to open-sourc
 
 | PR | What I fixed |
 |---|---|
+| [#67274](https://github.com/vllm-project/vllm/pull/67274) | **Release Docker image:** installing the KV connectors (LMCache) downgraded OpenTelemetry below vLLM's security floor. The image now keeps vLLM's versions, as the CI image already did. |
 | [#65935](https://github.com/vllm-project/vllm/pull/65935) | **ROCm MoE kernel benchmark:** the tuning script failed with current Ray on AMD GPUs, and multi-GPU runs could not tell the workers' devices apart. Validated on 2× Radeon RX 9070 XT. |
 | [#64885](https://github.com/vllm-project/vllm/pull/64885) | **EmbeddingGemma 2:** every request for shortened (Matryoshka) embeddings was rejected. Enabled the model's supported sizes through its model config hook. |
 | [#62517](https://github.com/vllm-project/vllm/pull/62517) | **DeepSeek V4.1 tool parser:** a variant spelling of the tool-call opener leaked into the response text instead of starting a tool call. |
@@ -24,9 +25,9 @@ I'm currently diving deeper into ML infrastructure by contributing to open-sourc
 
 **In review**
 
-- **vLLM** [#68202](https://github.com/vllm-project/vllm/pull/68202): Humming-quantized checkpoints with unquantized layers crashed at load. Tested end to end on an NVIDIA RTX 8000.
+- **vLLM** [#69211](https://github.com/vllm-project/vllm/pull/69211): client-executed tool search for the Responses API (`tool_search` calls and results, deferred tools loaded without changing the cached prompt), with end-to-end tests on an H100.
+- **vLLM** [#68202](https://github.com/vllm-project/vllm/pull/68202): Humming-quantized checkpoints with unquantized layers crashed at load. Tested end to end on an NVIDIA H100 and RTX 8000.
 - **vLLM** [#67597](https://github.com/vllm-project/vllm/pull/67597): Gemma 4 chat template left out the empty thought channel after a tool response when thinking is off.
-- **vLLM** [#67274](https://github.com/vllm-project/vllm/pull/67274): release Docker image keeps vLLM's OpenTelemetry versions when installing KV connectors.
 - **vLLM** [#63141](https://github.com/vllm-project/vllm/pull/63141): fail fast when a pipeline-parallel MTP draft model has no input embedding.
 - **SGLang** [#44909](https://github.com/sgl-project/sglang/pull/44909): AMD AITER MoE path applied a correction bias the fake EP dispatch had zeroed.
 - **SGLang** [#44560](https://github.com/sgl-project/sglang/pull/44560): reject out-of-vocabulary `stop_token_ids` in both the Python and Rust servers.
