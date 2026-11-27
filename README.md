@@ -39,7 +39,7 @@ I'm currently diving deeper into ML infrastructure by contributing to open-sourc
 
 ### 🔬 Research & Engineering Experience
 
-- **Stony Brook Medicine:** speech-processing and LLM inference pipelines for clinical research, including speaker diarization with Whisper and NVIDIA NeMo, and analysis of 47K+ diaries and 2K+ interviews.
+- **Stony Brook Medicine:** Engineering clinical AI pipelines for $2.3M CDC-funded PTSD-STOP research, using Whisper and NVIDIA NeMo for speech transcription and diarization, GPT-based inference to assess psychological constructs across 47K+ diaries and 2K+ WTC interviews, and GPU-sharded processing across 2 NVIDIA A6000 GPUs to extract 5,120-dimensional Whisper embeddings from 952K+ participant turns, while improving LLM inference throughput 2.9×.
 - **Stony Brook University:** full-stack research applications with React, TypeScript and FastAPI, plus data pipelines handling 450M+ observations across ~240K users.
 - **Indian Space Research Organisation (ISRO):** Python and PySpark pipelines for multi-terabyte satellite telemetry, focused on anomaly analysis and data quality; cut manual processing by 40%.
 - **Dhirubhai Ambani Institute of Technology:** full-stack analytics applications with React, FastAPI and PostgreSQL, used by 5+ business teams; cut manual reporting by 50%.
